@@ -6,6 +6,7 @@ A modern Django web application featuring a responsive design, user authenticati
 
 - **User Authentication**: Secure login and logout functionality for users.
 - **Dynamic Theme Switching**: A beautiful theme switcher in the navigation bar allows users to toggle between light and dark modes. The user's preference is saved in their browser for a consistent experience.
+- **Social Authentication**: Convenient "Login with Google" feature powered by `django-allauth`.
 - **Responsive Design**: Built with Bootstrap 5, the interface is fully responsive and looks great on all devices, from desktops to mobile phones.
 - **Theme-Aware Components**: All major components, including the navigation bar, hero section, and content cards, adapt their styling for both light and dark modes.
 - **Static Pages**: Utilizes Django's `flatpages` app to easily manage static content like an "About Us" page.
@@ -56,11 +57,19 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```
 
 3.  **Install the required dependencies:**
-    _(Note: This assumes you have a `requirements.txt` file. If not, you can create one with `pip freeze > requirements.txt`)_
+    The project relies on several packages. You can install them directly:
+
+    ```sh
+    pip install django django-allauth requests requests-oauthlib PyJWT cryptography
+    ```
+
+    Alternatively, if you have a `requirements.txt` file:
 
     ```sh
     pip install -r requirements.txt
     ```
+
+    _(Note: You can create an up-to-date `requirements.txt` file with `pip freeze > requirements.txt` after installing the packages.)_
 
 4.  **Apply database migrations:**
 
@@ -84,5 +93,5 @@ The application will be available at `http://127.0.0.1:8000/`.
 ## Technologies Used
 
 - **Backend**: Python, Django
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap 5
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap 5, `django-allauth`
 - **Syntax Highlighting**: Pygments
